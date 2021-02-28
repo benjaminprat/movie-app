@@ -3,11 +3,4 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-actor = Actor.new({ first_name: "Colly", last_name: "Wolly", known_for: "Puppers in Paris" })
-
-10.times do
-  actor = Actor.create({ first_name: FFaker::Name.unique.first_name, last_name: FFaker::Name.unique.last_name, known_for: FFaker::Movie.unique.title })
-end
+movie = Movie.create({ title: FFaker::Movie.unique.title, year: FFaker::Vehicle.unique.year, plot: FFaker::Tweet.unique.tweet })
